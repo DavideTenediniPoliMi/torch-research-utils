@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=80.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "my-torch-utils"
+version = "0.1.0"
+description = "My personal PyTorch utilities for RL projects."
+readme = "README.md"
+requires-python = ">=3.13"
+license = { text = "MIT" }
+authors = [
+    { name = "Davide Tenedini", email = "davide.tenedini@polimi.it" },
+]
+
+dependencies = [
+    "numpy>=2.3.4",
+    "torch>=2.9.0",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+packages = { find = { where = ["src"] } }
+
+[dependency-groups]
+dev = [
+    "mypy>=1.18.2",
+    "ruff>=0.14.2",
+]
