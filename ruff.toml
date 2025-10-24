@@ -68,6 +68,7 @@ ignore = [
     "ERA001",
     "RUF012",
     "E402",
+    "C901",
 ]
 
 [format]
