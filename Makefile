@@ -5,4 +5,7 @@ format:
 
 lint:
 	uv run ruff check --fix $(SRC_DIR)
-	uv run mypy --ignore-missing-imports --install-types --non-interactive --package $(SRC_DIR)
+	uv run pyrefly check $(SRC_DIR)
+
+test:
+	uv run pytest tests/
